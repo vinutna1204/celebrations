@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO WORLD</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        .h1 {
+            background-color: rgb(85, 169, 234);
+            color: rgb(0, 0, 0);
+            font-style: italic;
+            margin-top: 300px;
+            font-size: x-large;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+    <div class="h1">
+        <marquee><h1>CELEBRATIONS</h1></marquee>
+    </div>
+
+    <script>
+        // Function to trigger confetti
+        function launchConfetti() {
+            confetti({
+                particleCount: 1000,
+                spread: 20000,
+                origin: {  }
+            });
+        }
+
+        // Automatically trigger confetti when the page loads
+        window.onload = () => {
+            setTimeout(() => {
+                launchConfetti();
+            }, 1000); // Delay of 1 second for better effect
+        };
+
+        // Additional confetti on click anywhere on the page
+        document.body.addEventListener('click', () => {
+            launchConfetti();
+        });
+    </script>
+</body>
+</html>
